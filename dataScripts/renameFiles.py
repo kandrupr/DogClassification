@@ -1,14 +1,14 @@
 import os
 
 cwd = os.getcwd()
-cwd += r"\assets"
+cwd += r"\assets\train"
 
 breed_dir = ""
 
-for filename in os.listdir("./assets"):
+for filename in os.listdir("./assets/train/"):
     breed_dir += cwd + "\\" + filename
     counter = 0
-    for image in os.listdir("./assets/"+filename):
+    for image in os.listdir("./assets/train/"+filename):
         ext = os.path.splitext(image)[1]
         old = os.path.join(breed_dir, image)
         new = os.path.join(breed_dir, str(counter) + ext)
